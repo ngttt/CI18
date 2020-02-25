@@ -31,6 +31,9 @@ components.register = `
         <div class="error" id="confirmPassword-error" </div>
     </div>
   
+    <div class="error" id="formError"></div>
+    <div class="noti" id="formNoti"></div>
+
       <div class='input-wrapper-register-footer'>
         <a id='already-have-account'>Already have an account? Login</a>
         <button id='btnInRegister' type='submit'>
@@ -61,6 +64,8 @@ components.login = `
         <div class= "error" id="password-error" </div>
         </div>
   
+        <div class="error" id="formError"></div>
+
       <div class='input-wrapper-login-footer'>
         <a href='./index.html' id='dont-have-account'> Don't have an account? Register </a>
         <button id='btnInLogin' type='submit'>
@@ -72,3 +77,8 @@ components.login = `
 </div>
 </div>
 `;
+
+// components.chat = `
+// <div>Id: ${model.authUser.uid} </div>
+// <div>Email: ${model.authUser.email} </div>
+// `

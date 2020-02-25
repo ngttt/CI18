@@ -111,6 +111,10 @@
   color: #f5222d;
 }
 
+.noti {
+  color: blue;
+}
+
 .login-container .form-wrapper .input-wrapper-login-footer #dont-have-account {
   text-decoration: none;
 }
