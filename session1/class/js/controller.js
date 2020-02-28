@@ -100,12 +100,17 @@ controller.login = async (loginForm) => {
                 }
                 else {
                     // thực hiện lưu dữ liệu
-                    components.login= `
-                    <meta http-equiv="refresh" content=10>`; // sau 2s sẽ chuyển trang
                     model.loginSuccess({
                         uid: loginResult.user.uid,
                         email: loginResult.user.email
                      });
+
+                     setTimeout( () => {
+                         view.setActiveScreen('chat')
+                     })
+
+                     view.setMessage('formNoti','Bạn đã đăng nhập thành công');
+
 
                      view.setActiveScreen('chat'); // khi lưu xong sẽ chuyển qua màn hình chat
                     
@@ -128,3 +133,21 @@ controller.login = async (loginForm) => {
     }
 }
    
+
+controller.addMessage = (newMessages) => {
+    //Tạo mesage của mình
+    const myMessage = {
+      content: newMessages,
+      sender: 'Me'
+    };
+  
+    //Tạo message của bot
+    const botMessage = {
+      content: newMessages,
+      sender: 'Bot'
+    };
+  
+    //add message cuar mình vào
+    view.addMessage(myMessage);
+    view.addMessage(botMessage);
+  }

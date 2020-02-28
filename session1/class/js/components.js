@@ -78,7 +78,48 @@ components.login = `
 </div>
 `;
 
-// components.chat = `
-// <div>Id: ${model.authUser.uid} </div>
-// <div>Email: ${model.authUser.email} </div>
-// `
+components.chat = `
+<div class="chatContainer">
+  <div class="chatHeader">
+    MindX Chat 
+  </div>
+
+  <div class="chatMain">
+
+    <div class="conversationDetail">
+      <div id="conversationName" class="conversationHeader"> 
+        Code Intesive JS
+      </div>
+
+      
+      <div class="conversationMessages" id="conversationMessages"> 
+      
+        <div class="messagesContainer your">
+          <div class="sender">You</div>
+          <div class="message">
+            Message content
+          </div>
+        </div>
+
+        <div class="messagesContainer">
+          <div class="sender">Chatbot</div>
+          <div class="message">
+            Message content
+          </div>
+        </div>
+      
+      </div>
+
+      <form name="messagesForm" id="messagerForm">
+        <div class="conservationInput">
+          <input id="messageInput" name="message" placeholder="Type your messages" />
+          <button class="button" type="submit" > Send </button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+  </div> 
+`;

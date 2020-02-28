@@ -37,10 +37,20 @@ view.setActiveScreen = screenName => {
       break;
 
       case 'chat':
-        document.getElementById('app').innerHTML =  `
-        <div>Id: ${model.authUser.uid} </div>
-        <div>Email: ${model.authUser.email} </div>
-        `;
+        document.getElementById('app').innerHTML = components.chat;
+        const messagesForm= document.getElementById('messagerForm');
+        messagesForm.addEventListener('submit', e => {
+          e.preventDefault();
+          const newMessages = messagesForm.message.value;
+          // Thêm message vào danh sách
+          controller.addMessage(newMessages)
+          // reset input về vị trí ban đầu
+          messagesForm.message.value="";
+      });
+      //   document.getElementById('app').innerHTML =  `
+      //   <div>Id: ${model.authUser.uid} </div>
+      //   <div>Email: ${model.authUser.email} </div>
+      //   `;
       break;
   }
 };
@@ -49,4 +59,26 @@ view.setActiveScreen = screenName => {
 
 view.setMessage = (id, textError) => {
   document.getElementById(id).innerHTML = textError;
+};
+
+
+// hàm để rendẻ ra mesage
+
+//messageObject bao gồm sender và content
+view.addMessage = messageObject => {
+
+  //tạo message container
+  const messageContainer = document.createElement('div');
+
+  //thêm class cho container
+  messageContainer.classList.add('messagesContainer');
+
+  // tạo message
+  const message = document.createElement('div');
+  messageContainer.classList.add('message');
+  message.innerHTML = messageObject.content;
+
+  //
+  messageContainer.appendChild(your);
+  document.getElementById('conversationMessages').appendChild(messageContainer);
 };
