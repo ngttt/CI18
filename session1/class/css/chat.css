@@ -1,26 +1,26 @@
 .chatContainer {
-    height: 100vh;     /*  view port height 50 sẽ chia đôi màn hình ngang*/
-    overflow: hidden; /* vd 1 div có tẽ dài bị tràn ra khỏi div thì nó có 
+  height: 100vh; /*  view port height 50 sẽ chia đôi màn hình ngang*/
+  overflow: hidden; /* vd 1 div có tẽ dài bị tràn ra khỏi div thì nó có 
     thể che phần tràn đi scroll: là có thẻ dùng chuột kéo lên xuống để coi phần tràn */
 }
 
 .chatContainer .chatHeader {
-    color: blanchedalmond;
-    background-color: #4482ff;
-    height: 64px;
-    line-height: 64px;
-    font-size: 24px;
-    text-align: center;
+  color: blanchedalmond;
+  background-color: #4482ff;
+  height: 64px;
+  line-height: 64px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .chatContainer .chatMain {
-    height: calc(100% - 64px); 
+  height: calc(100% - 64px);
 }
 
-.chatContainer .chatMain .conversationDetail { 
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.chatContainer .chatMain .conversationDetail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* .chatContainer>.chatMain .conversationDetail : dấu mũi tên có nghĩa là chỉ đến con trực
@@ -29,64 +29,63 @@
 /* .chatContainer.chatMain .conversationDetail : ghi liền là cùng hàng với nhau  */
 
 .chatContainer .chatMain .conversationDetail .conversationHeader {
-    height: 64px;
-    line-height: 64px;
-    border-bottom: 1px dotted #6b59bb;
-    text-align: center;
-    font-size: 20px;
+  height: 64px;
+  line-height: 64px;
+  border-bottom: 1px dotted #6b59bb;
+  text-align: center;
+  font-size: 20px;
 }
 
-
 .chatContainer .chatMain .conversationDetail .conversationMessages {
-    flex-grow: 1;
-    overflow-y: scroll;
-    padding: 12px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 12px;
 }
 
 .chatContainer .chatMain .conversationDetail .conservationInput {
-    display: flex;
-    height: 64px;
-    line-height: 64px;
-    border-top: 1px dotted #6b59bb ;
-    padding-left: 12px;
+  display: flex;
+  height: 64px;
+  line-height: 64px;
+  border-top: 1px dotted #6b59bb;
+  padding-left: 12px;
 }
 
 .chatContainer .chatMain .conversationDetail .conservationInput input {
-    height: 64px;
-    flex: 1;
+  height: 64px;
+  flex: 1;
 }
 
 .chatContainer .chatMain .conversationDetail .conservationInput button {
-    font-weight: 550px;
-    margin: 0px 12px;
+  font-weight: 550px;
+  margin: 0px 12px;
 }
 
 .chatContainer .chatMain .conversationDetail .conservationInput input:focus {
-    outline: none;
+  outline: none;
 }
 
 .messagesContainer {
-    margin: 6px;
-    width: 100%;
+  margin: 6px;
+  width: 100%;
 }
 
 .message {
-    padding: 6px 12px;
-    max-width: 40%;
-    background-color: #b2abcf;
-    border-radius: 8px;
-    display: inline-block;
+  padding: 6px 12px;
+  max-width: 40%;
+  background-color: #b2abcf;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .your {
-    text-align: right;
+  text-align: right;
 }
 
 .your .message {
-    padding: 6px 12px;
-    max-width: 40%;
-    background-color: #503ba3;
-    color: blanchedalmond;
-    border-radius: 8px;
-    display: inline-block;
+  padding: 6px 12px;
+  max-width: 40%;
+  background-color: #503ba3;
+  color: blanchedalmond;
+  border-radius: 8px;
+  display: inline-block;
 }

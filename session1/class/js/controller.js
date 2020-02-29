@@ -138,16 +138,11 @@ controller.addMessage = (newMessages) => {
     //Tạo mesage của mình
     const myMessage = {
       content: newMessages,
-      sender: 'Me'
+      user: model.authUser.email,
+      createdAt: new Date().toISOString()
     };
-  
-    //Tạo message của bot
-    const botMessage = {
-      content: newMessages,
-      sender: 'Bot'
-    };
+    model.addMessage(myMessage);
   
     //add message cuar mình vào
-    view.addMessage(myMessage);
-    view.addMessage(botMessage);
+    // view.addMessage(myMessage);
   }

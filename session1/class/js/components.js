@@ -94,20 +94,6 @@ components.chat = `
       
       <div class="conversationMessages" id="conversationMessages"> 
       
-        <div class="messagesContainer your">
-          <div class="sender">You</div>
-          <div class="message">
-            Message content
-          </div>
-        </div>
-
-        <div class="messagesContainer">
-          <div class="sender">Chatbot</div>
-          <div class="message">
-            Message content
-          </div>
-        </div>
-      
       </div>
 
       <form name="messagesForm" id="messagerForm">
