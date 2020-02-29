@@ -75,10 +75,24 @@ view.addMessage = messageObject => {
 
   // tạo message
   const message = document.createElement('div');
-  messageContainer.classList.add('message');
+  message.classList.add('message');
   message.innerHTML = messageObject.content;
 
+  if(messageObject.sender == 'Me') {
+    messageContainer.classList.add('your');
+  }
+  else {
+    const sender = document.createElement('div');
+    sender.classList.add('sender');
+    sender.innerHTML = messageObject.sender;
+
+    //theme teen nguoiwf guiwr
+    messageContainer.appendChild(sender);
+  }
+
+  
+
   //
-  messageContainer.appendChild(your);
+  messageContainer.appendChild(message);
   document.getElementById('conversationMessages').appendChild(messageContainer);
 };
