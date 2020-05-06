@@ -3,10 +3,11 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
-.register-container, .login-container {
+.register-container,
+.login-container {
   width: 100%;
   min-width: 400px;
   height: 100vh;
@@ -14,11 +15,12 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  background: url('../login-background.jpg') no-repeat center center;
+  background: url("../login-background.jpg") no-repeat center center;
   background-size: cover;
 }
 
-.register-container .form-wrapper , .login-container .form-wrapper{
+.register-container .form-wrapper,
+.login-container .form-wrapper {
   width: 500px;
   min-width: 400px;
   height: 100%;
@@ -26,20 +28,22 @@
   background-color: #ffffff;
 }
 
-.register-container .form-wrapper .logo, .login-container .form-wrapper .logo {
+.register-container .form-wrapper .logo,
+.login-container .form-wrapper .logo {
   width: 100%;
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.register-container .form-wrapper .logo span, .login-container .form-wrapper .logo span{
+.register-container .form-wrapper .logo span,
+.login-container .form-wrapper .logo span {
   font-size: 32px;
   font-weight: 300;
   color: #788195;
 }
 
-.register-container .form-wrapper .form-container .name-wrapper  {
+.register-container .form-wrapper .form-container .name-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -49,7 +53,7 @@
 }
 
 .register-container .form-wrapper .form-container .register-footer,
- .login-container .form-wrapper .form-container .register-footer {
+.login-container .form-wrapper .form-container .register-footer {
   display: flex;
   justify-content: space-between;
 }
@@ -59,7 +63,6 @@
   .form-container
   .register-footer
   #already-have-account,
-
 .login-container
   .form-wrapper
   .form-container
@@ -87,7 +90,9 @@
   border-radius: 5px;
 }
 
-#btnInRegister, #btnInLogin {
+#btnInRegister,
+#btnInLogin,
+#btnInCancel {
   margin-left: 80px;
   margin-top: 10px;
   font-weight: 500;

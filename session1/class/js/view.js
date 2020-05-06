@@ -53,6 +53,32 @@ view.setActiveScreen = screenName => {
       //   <div>Id: ${model.authUser.uid} </div>
       //   <div>Email: ${model.authUser.email} </div>
       //   `;
+
+      const createCoversation = document.getElementById("createConversation");
+      createCoversation.addEventListener("click", e => {
+        e.stopPropagation(); // *****************
+        document
+          .getElementById("add-conversation-modal")
+          .classList.add("active");
+      });
+
+      const btncancel = document.getElementById("btnInCancel");
+      btncancel.addEventListener("click", e => {
+        e.preventDefault(); //không  cho load lại trang chat
+        document
+          .getElementById("add-conversation-modal")
+          .classList.remove("active");
+      });
+
+      document //********** */
+        .getElementsByTagName("body")[0]
+        .addEventListener("click", e => {
+          e.preventDefault(); //không  cho load lại trang chat
+          document
+            .getElementById("add-conversation-modal")
+            .classList.remove("active");
+        });
+
       break;
   }
 };
@@ -78,7 +104,7 @@ view.addMessage = messageObject => {
   message.classList.add("message");
   message.innerHTML = messageObject.content;
 
-  if (messageObject.sender == model.authUser.email) {
+  if (messageObject.user == model.authUser.email) {
     messageContainer.classList.add("your");
   }
   const sender = document.createElement("div");

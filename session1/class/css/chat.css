@@ -89,3 +89,69 @@
   border-radius: 8px;
   display: inline-block;
 }
+
+.chatContainer .chatMain {
+  display: flex;
+}
+
+.chatContainer .chatMain .createConversation {
+  flex: 1;
+  border-right: 3px solid #503ba3;
+}
+
+.chatContainer .chatMain .conversationList {
+  flex: 3;
+}
+
+#createConversation {
+  margin-left: 80px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #4482ff;
+  border-color: #4482ff;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.5;
+  padding: 0 25px;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 36px;
+}
+
+.selectedConversation {
+  background-color: rba(0, 0, 0.05);
+}
+
+.conversationItem {
+  margin-top: 17px;
+  border-top: 1px solid #503ba3;
+}
+
+.componentUser {
+  height: 64px;
+  padding: 12px;
+  font-size: 10px;
+  border-bottom: 1px solid #503ba3;
+  cursor: pointer;
+}
+
+.add-coversation-modal {
+  display: none;
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+  position: fixed;
+  background-color: whitesmoke;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-coversation-modal.active {
+  display: block;
+}

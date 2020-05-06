@@ -52,6 +52,9 @@ components.login = `
   <div class='logo'>
     <span>Techkids Chat</span>
   </div>
+
+ 
+
   <div class='form-container'>
     <form id='login-form'>
       <div class='input-wrapper'>
@@ -79,12 +82,58 @@ components.login = `
 `;
 
 components.chat = `
+
 <div class="chatContainer">
   <div class="chatHeader">
     MindX Chat 
   </div>
 
+  <div class ="add-coversation-modal" id ="add-conversation-modal"> 
+    <div class="chatHeader">
+      Add Conversation
+    </div>
+
+    <form id ="add-conversation-form">
+      <div class ="input-wrapper">
+
+          <input class='input' type="text" name="conversation" placeholder="Conversation Name" />
+
+          <input class='input' type="text" name="Email" placeholder="Email" />
+
+          <button id='btnInLogin' type='submit'>
+          <span>Add</span>
+          </button>
+
+          <button id='btnInCancel' type='submit'>
+          <span>cancel</span>
+          </button>
+
+      </div>
+    </form>
+  </div>
+
   <div class="chatMain">
+
+  <div class="createConversation">
+  <button id = "createConversation" class="btn"> + New Conversation </button>
+  
+  <div class = "conversationItem" > 
+
+    <div class = "componentUser"> Chat 1 </div>
+
+    <div class = "componentUser"> Chat 2 </div>
+
+    <div class = "componentUser"> Chat 3 </div>
+
+  </div>
+
+  </div>
+
+
+
+  <div class= "conversationList"> 
+  
+ 
 
     <div class="conversationDetail">
       <div id="conversationName" class="conversationHeader"> 

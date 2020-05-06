@@ -3,7 +3,9 @@ const model = {};
 
 //1. khỏi tạo dữ liệu trống
 
-model.authUser = undefined;
+model.authUser = {
+  email: "1754050092tien@ou.edu.vn"
+};
 model.activeConversation = undefined;
 
 //2. Cập nhật thông tin sau khi đăng nhập thành công
